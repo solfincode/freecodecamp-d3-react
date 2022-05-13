@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Circle from "../components/Circle";
+import Arc from "../components/Arc";
 
 const circle = {
   width: 400,
@@ -14,7 +15,7 @@ const BasicSvg = () => {
     <div className="p-4">
       <Link
         to="/"
-        className="bg-orange-600 rounded-lg text-white text-lg p-1 w-1/3 mt-6 cursor-pointer mr-4"
+        className="bg-orange-600 rounded-lg text-white text-lg px-4 py-2 w-1/3 mt-6 cursor-pointer mr-4"
       >
         back to home
       </Link>
@@ -33,6 +34,7 @@ const BasicSvg = () => {
           cy={circle.cy}
           r="100"
         />
+        <Arc />
       </div>
     </div>
   );
