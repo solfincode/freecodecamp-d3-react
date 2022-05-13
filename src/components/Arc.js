@@ -12,7 +12,7 @@ const Arc = () => {
     <svg width="400" height="400">
       <svg x="100" y="100">
         <path d={arcEl()} fill="#ea580c" />
-        <circle cx="0" cy="0" r="50" fill="white" />
+        <circle cx="0" cy="0" r="50" fill="black" />
       </svg>
     </svg>
   );

@@ -5,7 +5,8 @@ const Circle = ({ width, height, cx, cy, r }) => {
     <>
       <svg width={width} height={height}>
         <circle cx={cx} cy={cy} r={r} fill="#ea580c"></circle>
-        <circle cx={cx} cy={cy} r={r / 2} fill="white"></circle>
+        <circle cx={cx} cy={cy} r={r / 2} fill="black"></circle>
+        <circle cx={cx} cy={cy} r={r / 4} fill="white"></circle>
       </svg>
     </>
   );
