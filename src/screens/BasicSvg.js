@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Circle from "../components/Circle";
 import Arc from "../components/Arc";
@@ -11,7 +11,16 @@ const circle = {
   cy: 200,
 };
 
+const width = 1200;
+const height = 600;
+
 const BasicSvg = () => {
+  const [mousePos, setMousePos] = useState({ x: width / 2, y: height / 2 });
+
+  const handleMouseMove = (event) => {
+    const { clientX, clientY } = event;
+    setMousePos({ x: clientX, y: clientY });
+  };
   return (
     <div className="p-4">
       <Link
@@ -30,6 +39,22 @@ const BasicSvg = () => {
           r="100"
         />
         <Arc />
+      </div>
+      <div className="flex flex-row justify-center bg-black">
+        <svg width={width} height={height} onMouseMove={handleMouseMove}>
+          <circle
+            r="20"
+            fill="#ea580c"
+            cx={mousePos.x - 40}
+            cy={mousePos.y - 320}
+          ></circle>
+          <circle
+            r="10"
+            fill="white"
+            cx={mousePos.x - 40}
+            cy={mousePos.y - 320}
+          ></circle>
+        </svg>
       </div>
     </div>
   );
