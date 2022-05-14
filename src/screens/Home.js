@@ -13,6 +13,12 @@ const Home = () => {
           >
             basic svg
           </Link>
+          <Link
+            to="/loadcsv"
+            className="bg-orange-600 rounded-lg text-white text-lg p-1 w-1/3 mt-6 cursor-pointer mr-4"
+          >
+            load csv
+          </Link>
         </div>
       </div>
     </>
